@@ -180,6 +180,9 @@ $pls = array_merge($scriptProperties, [
     'delivery' => ($tmp = $order->getOne('Delivery'))
         ? $tmp->toArray()
         : [],
+    'status' => ($status = $order->getOne('Status'))
+        ? $status->toArray()
+        : [],
     'payment' => ($payment = $order->getOne('Payment'))
         ? $payment->toArray()
         : [],
